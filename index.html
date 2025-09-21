@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tienda de Muebles KARIMAT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <div class="usuario-icono">
+    <a href="admin.html" title="Panel Administrativo" onclick="protegerAdmin(event)">
+    <img src="Img/usuario.jpg" alt="Usuario" />  
+     </a>
+    </div>
+    <div class="cliente-icono">
+    <a href="usuario.html" title="Panel Usuario">
+    <img src="Img/Cliente.jpg" alt="Cliente" />
+    </a>
+  </div>
+  <div class="buscador-container">
+  <input type="text" id="barra-busqueda" placeholder="Buscar productos...">
+  <button id="btn-buscar">🔍</button>
+</div>
+
+    <div class="logo-titulo">
+    <h1>Muebles KARIMAT</h1>
+     <img src="Img/Karimat.jpg" alt="Logo KARIMAT">
+     </div>
+      <nav>
+        <ul class="menu-principal">
+          <li><a href="#">Inicio</a></li>
+
+          <li class="dropdown">
+            <a href="#">Sala</a>
+            <ul class="submenu">
+              <li><a href="#">Sofás</a></li>
+              <li><a href="#">Sillones</a></li>
+              <li><a href="#">Mesas de centro</a></li>
+            </ul>
+          </li>
+
+            <li class="dropdown">
+                <a href="#">Dormitorio</a>
+                <ul class="submenu">
+                  <li><a href="#">Camas</a></li>
+                  <li><a href="#">Roperos</a></li>
+                  <li><a href="#">Veladores</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="#">Comedor</a>
+                <ul class="submenu">
+                  <li><a href="#">Mesas</a></li>
+                  <li><a href="#">Sillas</a></li>
+                  <li><a href="#">Aparadores</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="#">Oficina</a>
+                <ul class="submenu">
+                  <li><a href="#">Escritorios</a></li>
+                  <li><a href="#">Sillas de oficina</a></li>
+                  <li><a href="#">Archivadores</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="#">Exterior</a>
+                <ul class="submenu">
+                  <li><a href="#">Juegos de terraza</a></li>
+                  <li><a href="#">Bancos</a></li>
+                  <li><a href="#">Maceteros</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="#">Decoración</a>
+                <ul class="submenu">
+                  <li><a href="#">Cuadros</a></li>
+                  <li><a href="#">Lámparas</a></li>
+                  <li><a href="#">Alfombras</a></li>
+                </ul>
+              </li>
+        <li><a href="#">Nosotros</a></li>
+     </ul>
+    </nav>
+  </header>
+
+  <!-- Sección principal -->
+    <main>
+    <section class="bienvenida">
+      <h2>Transforma tu espacio en un hogar con personalidad</h2>
+      <p>
+        En <strong>Muebles KARIMAT</strong> creamos ambientes que reflejan tu estilo único. Desde sofás elegantes hasta soluciones inteligentes para tu oficina o terraza, nuestros muebles combinan diseño, calidad y confort.
+      </p>
+    <p>
+      Disfruta de una experiencia completa con asesoramiento personalizado, materiales duraderos y un catálogo que evoluciona contigo.
+    </p>
+     <a href="https://wa.me/51968885161" target="_blank" class="btn-descubrir">Chat por WhatsApp</a>
+    </section>
+
+<section class="slider">
+  <img class="slide activa" src="Muebles/sofa.jpg" alt="Sofa moderno">
+  <img class="slide" src="Muebles/esquinero.jpg" alt="Armario perfecto">
+  <img class="slide" src="Muebles/R.jpg" alt="Estantería novedosa">
+</section>
+
+
+    <section class="productos-destacados">
+      <h3>Productos Destacados</h3>
+      <div class="galeria">
+        <div class="producto">
+          <img src="Muebles/sofa.jpg" alt="Sofá moderno">
+          <h4>Sofá Moderno</h4>
+          <p>S/. 1,200</p>
+           <button class="btn-carrito">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="Muebles/comedor.jpg" alt="Mesa de comedor">
+          <h4>Mesa de Comedor</h4>
+          <p>S/. 900</p>
+           <button class="btn-carrito">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="Muebles/armario.jpg" alt="Armario de madera">
+          <h4>Armario de Madera</h4>
+          <p>S/. 750</p>
+           <button class="btn-carrito">Agregar al carrito</button>
+        </div>
+          <div class="producto">
+              <img src="Muebles/estanderia.jpg" alt="Estantería moderna">
+              <h4>Estantería Moderna</h4>
+              <p>S/. 550</p>
+               <button class="btn-carrito">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+              <img src="Muebles/silla.jpg" alt="Silla ergonómica de oficina">
+              <h4>Silla Ergonómica</h4>
+              <p>S/. 480</p>
+               <button class="btn-carrito">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+              <img src="Muebles/terraza.jpg" alt="Juego de terraza rústico">
+              <h4>Juego de Terraza Rústico</h4>
+              <p>S/. 1,100</p>
+               <button class="btn-carrito">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+              <img src="Muebles/esquinero.jpg" alt="Sofá Esquinero">
+              <h4>Sofá Esquinero Elegante</h4>
+              <p>S/. 1,450</p>
+              <button class="btn-carrito">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+              <img src="Muebles/tocador.jpg" alt="Tocador de Madera">
+              <h4>Tocador con Espejo</h4>
+              <p>S/. 820</p>
+              <button class="btn-carrito">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+              <img src="Muebles/librero.jpg" alt="Librero de roble">
+              <h4>Librero de Roble</h4>
+              <p>S/. 690</p>
+              <button class="btn-carrito">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+              <img src="Muebles/banqueta.jpg" alt="Banqueta acolchada">
+              <h4>Banqueta Acolchada</h4>
+              <p>S/. 360</p>
+              <button class="btn-carrito">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+              <img src="Muebles/muebleTV.jpg" alt="Mueble para TV">
+              <h4>Mueble para TV Moderno</h4>
+              <p>S/. 980</p>
+              <button class="btn-carrito">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+              <img src="Muebles/bufetera.jpg" alt="Bufetera elegante">
+              <h4>Bufetera de Diseño</h4>
+              <p>S/. 1,050</p>
+              <button class="btn-carrito">Agregar al carrito</button>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+<footer>
+  <div class="footer-contenedor">
+    <div class="footer-col">
+      <h4>Contáctanos</h4>
+      <ul>
+        <li>WhatsApp 24/7</li>
+        <li>Email: <a href="mailto:karimat@muebles.com">karimat@muebles.com</a></li>
+        <li>Teléfono: (01) 999-888-777<br>Horario: Lun-Dom 8:00 a 20:00</li>
+        <li><a href="#">Ver tiendas</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Categorías</h4>
+      <ul>
+        <li><a href="#">Sala</a></li>
+        <li><a href="#">Dormitorio</a></li>
+        <li><a href="#">Comedor</a></li>
+        <li><a href="#">Oficina</a></li>
+        <li><a href="#">Exterior</a></li>
+        <li><a href="#">Decoración</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Atención al cliente</h4>
+      <ul>
+        <li><a href="#">Preguntas frecuentes</a></li>
+        <li><a href="#">Cambios y devoluciones</a></li>
+        <li><a href="#">Políticas de privacidad</a></li>
+        <li><a href="#">Seguimiento de pedidos</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Síguenos</h4>
+      <div class="social-icons">
+        <a href="#"><img src="Img/faceb.jpg" alt="Facebook"></a>
+        <a href="#"><img src="Img/inst.jpg" alt="Instagram"></a>
+        <a href="#"><img src="Img/wat.jpg" alt="WhatsApp"></a>
+      </div>
+      <h4 style="margin-top: 20px;">Suscríbete</h4>
+      <form class="suscripcion">
+        <input type="email" placeholder="Tu correo" required>
+        <button type="submit">Suscribirme</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>&copy; 2025 Tienda de Muebles KARIMAT. Todos los derechos reservados.</p>
+    <p>Ciencias Contables - Desarrollo de Sistema Contable</p>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+
+<script>
+function protegerAdmin(e) {
+  e.preventDefault(); // evita que vaya directo a admin.html
+
+  const claveCorrecta = "admin123"; // 🔐 puedes cambiar esta clave
+  const intento = prompt("🔒 Ingrese la contraseña para acceder:");
+
+  if (intento === claveCorrecta) {
+    window.location.href = "admin.html";
+  } else if (intento !== null) {
+    alert("❌ Contraseña incorrecta.");
+  }
+}
+</script>
+</body>
+</html>

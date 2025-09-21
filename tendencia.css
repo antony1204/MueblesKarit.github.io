@@ -1,0 +1,165 @@
+/* Reset básico */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+}
+
+/* Hero / Encabezado principal */
+.hero {
+  background: linear-gradient(to right, #167caf, #44a3c4);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* Filtros */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.08);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.filter-group select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Tarjetas de gráficos */
+.charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.chart-card {
+  flex: 1 1 450px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.chart-card h2 {
+  margin-bottom: 20px;
+  color: #167caf;
+  font-size: 20px;
+}
+
+/* Muebles destacados */
+.trending-items h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #167caf;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+  padding: 15px;
+  text-align: center;
+}
+
+.item img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.item h3 {
+  font-family: Cambria, serif;
+  font-size: 18px;
+  color: #167caf;
+  margin: 12px 0 8px 0;
+}
+
+.item button {
+  background-color: #167caf;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.item button:hover {
+  background-color: #125f82;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  font-size: 14px;
+  background-color: #e8f0f6;
+  padding: 15px;
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+}
+
+#fecha-actual {
+  font-weight: bold;
+  color: #167caf;
+}
+
+.centrar-imagen {
+  text-align: center;
+}
+
+.centrar-imagen img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tendencias de Muebles 2023</title>
+    <link rel="stylesheet" href="tendencia.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="hero">
+        <h1>Tendencias de Mobiliario 2025</h1>
+        <p>Análisis de muebles más populares y proyección de ventas</p>
+    </div>
+        <div class="centrar-imagen">
+  <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/aceb341a-e46b-4e97-b7fe-1711f0e8c6d5.png" alt="Diseño de interiores moderno" />
+</div>
+
+
+    <div class="container">
+        <div class="filters">
+            <div class="filter-group">
+                <label for="category">Categoría:</label>
+                <select id="category">
+                    <option value="todos">Todos</option>
+                    <option value="sala">Sala</option>
+                    <option value="dormitorio">Dormitorio</option>
+                    <option value="comedor">Comedor</option>
+                    <option value="oficina">Oficina</option>
+                    <option value="exterior">Exterior</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="periodo">Período:</label>
+                <select id="periodo">
+                    <option value="ultimos-3">Últimos 3 meses</option>
+                    <option value="ultimos-6">Últimos 6 meses</option>
+                    <option value="anual">12 meses</option>
+                    <option value="proyeccion">Proyección</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="charts-container">
+            <div class="chart-card">
+                <h2>Tendencias Actuales</h2>
+                <canvas id="tendenciasChart"></canvas>
+                 <p class="fuente">Fuente: Datos internos de ventas Muebles Peru</p>
+            </div>
+            <div class="chart-card">
+                <h2>Proyección de Ventas</h2>
+                <canvas id="ventasChart"></canvas>
+                p class="fuente">Fuente: Datos internos de ventas Muebles Peru</p>
+            </div>
+        </div>
+
+        <div class="trending-items">
+            <h2>Muebles Destacados</h2>
+            <div class="items-grid">
+                <!-- Items se generarán dinámicamente con JS -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Datos actualizados: <span id="fecha-actual"></span></p>
+    </footer>
+
+    <script src="tendencia.js"></script>
+</body>
+</html>
+

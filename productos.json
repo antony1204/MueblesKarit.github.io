@@ -1,0 +1,62 @@
+[
+  {
+    "nombre": "Sofá Moderno",
+    "precio": 1200,
+    "imagen": "Muebles/sofa.jpg"
+  },
+  {
+    "nombre": "Mesa de Comedor",
+    "precio": 900,
+    "imagen": "Muebles/comedor.jpg"
+  },
+  {
+    "nombre": "Armario de Madera",
+    "precio": 750,
+    "imagen": "Muebles/armario.jpg"
+  },
+  {
+    "nombre": "Estantería Moderna",
+    "precio": 550,
+    "imagen": "Muebles/estanderia.jpg"
+  },
+  {
+    "nombre": "Silla Ergonómica",
+    "precio": 480,
+    "imagen": "Muebles/silla.jpg"
+  },
+  {
+    "nombre": "Juego de Terraza Rústico",
+    "precio": 1100,
+    "imagen": "Muebles/terraza.jpg"
+  },
+  {
+    "nombre": "Cabecera Tapizada Queen",
+    "precio": 780,
+    "imagen": "Muebles/cabecera.jpg"
+  },
+  {
+    "nombre": "Librero Escandinavo",
+    "precio": 620,
+    "imagen": "Muebles/librero.jpg"
+  },
+  {
+    "nombre": "Mesa Lateral Circular",
+    "precio": 260,
+    "imagen": "Muebles/mesalateral.jpg"
+  },
+  {
+    "nombre": "Butaca Vintage Azul",
+    "precio": 690,
+    "imagen": "Muebles/butaca.jpg"
+  },
+  {
+    "nombre": "Cómoda de 4 Cajones",
+    "precio": 740,
+    "imagen": "Muebles/comoda.jpg"
+  },
+  {
+    "nombre": "Banco Alto de Bar",
+    "precio": 320,
+    "imagen": "Muebles/banco.jpg"
+  }
+]

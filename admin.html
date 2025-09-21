@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel de Gestión - Muebles RAUWTAN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <header class="admin-header">
+      <a href="index.html" class="logo-titulo">
+        <h1>Panel de Gestión KARIMAT</h1>
+        <img src="Img/conta.jpg" alt="Logo KARIMAT">
+      </a>
+
+    <nav class="menu-admin">
+      <ul class="menu-principal">
+        <li><a href="#ventas">Ventas</a></li>
+        <li><a href="#compras">Compras</a></li>
+        <li><a href="#almacen">Almacén</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#proveedores">Proveedores</a></li>
+        <li><a href="#trabajadores">Trabajadores</a></li>
+        <li><a href="tendencia.html">Tendencias</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="ventas">
+      <h2>Ventas</h2>
+      <div class="acciones-ventas">
+
+        <!-- Modal para agregar ventas -->
+        <div id="modalVenta" class="modal">
+          <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <h3>➕Agregar nueva venta</h3>
+            <form id="formVenta">
+              <input type="date" id="fechaVenta" required />
+              <input type="text" id="productoVenta" placeholder="Producto" required />
+              <input type="number" id="cantidadVenta" placeholder="Cantidad" required />
+              <input type="number" id="totalVenta" placeholder="Total S/." required />
+              <button type="submit">Guardar venta</button>
+            </form>
+          </div>
+        </div>
+
+        <button id="btnAgregarVenta">➕ Agregar venta</button>
+        <button id="btnEliminarVenta">🗑️ Eliminar fila seleccionada</button>
+        
+        <!-- Modal para editar venta -->
+        <div id="modalEditar" class="modal">
+          <div class="modal-contenido">
+            <span class="cerrar" id="cerrarEditar">&times;</span>
+            <h3>Editar venta</h3>
+            <form id="formEditarVenta">
+              <input type="date" id="editFecha" required />
+              <input type="text" id="editProducto" placeholder="Producto" required />
+              <input type="number" id="editCantidad" placeholder="Cantidad" required />
+              <input type="number" id="editTotal" placeholder="Total S/." required />
+              <button type="submit">Actualizar</button>
+            </form>
+          </div>
+        </div>
+        <button id="btnEditarVenta">✏️ Editar fila seleccionada</button>
+        
+        <button id="btnExportarVentas">📤 Exportar a Excel</button>
+      </div>
+
+      <table  id="tablaVentasCompleta">
+        <thead>
+          <tr><th>Fecha</th><th>Producto</th><th>Cantidad</th><th>Total</th></tr>
+        </thead>
+        <tbody id="tablaVentas">
+          <!-- Datos dinámicos -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="compras">
+      <h2>Compras</h2>
+      <table>
+        <thead>
+          <tr><th>Proveedor</th><th>Producto</th><th>Cantidad</th><th>Fecha</th></tr>
+        </thead>
+        <tbody id="tablaCompras">
+          <!-- Datos dinámicos -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="almacen">
+      <h2>Inventario</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Producto</th>
+        <th>Categoría</th>
+        <th>Cantidad</th>
+        <th>Stock mínimo</th>
+        <th>Ubicación</th>
+      </tr>
+    </thead>
+    <tbody id="tablaAlmacen">
+      <!-- Datos dinámicos -->
+    </tbody>
+  </table>
+    </section>
+
+    <section id="clientes">
+      <h2>Clientes Registrados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th><th>Nombre</th><th>Apellido</th><th>Correo</th><th>Celular</th><th>Edad</th>
+          </tr>
+        </thead>
+        <tbody id="tablaClientes">
+          <!-- Aquí se insertarán las filas dinámicamente -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="proveedores">
+      <h2>Proveedores</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Empresa</th>
+        <th>Contacto</th>
+        <th>Teléfono</th>
+        <th>Email</th>
+        <th>Rubro</th>
+      </tr>
+    </thead>
+    <tbody id="tablaProveedores">
+      <!-- Datos dinámicos -->
+    </tbody>
+  </table>
+    </section>
+
+    <section id="trabajadores">
+      <h2>Trabajadores</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>DNI</th>
+        <th>Cargo</th>
+        <th>Área</th>
+        <th>Teléfono</th>
+      </tr>
+    </thead>
+    <tbody id="tablaTrabajadores">
+      <!-- Datos dinámicos -->
+    </tbody>
+  </table>
+    </section>
+  </main>
+
+  <footer class="admin-footer">
+    <p>&copy; 2025 Muebles RAUWTAN – Sistema de Administración Interna</p>
+  </footer>
+   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+  <script>
+  document.getElementById('btnExportarVentas').addEventListener('click', function() {
+    var tabla = document.getElementById('tablaVentasCompleta');
+    var wb = XLSX.utils.book_new();
+    var ws = XLSX.utils.table_to_sheet(tabla);
+    XLSX.utils.book_append_sheet(wb, ws, "Ventas");
+    XLSX.writeFile(wb, "ventas_exportadas.xlsx");
+  });
+  </script> <script src="admin.js"></script>
+
+ <script>
+  function cargarClientes() {
+    const tabla = document.getElementById('tablaClientes');
+    tabla.innerHTML = ''; // Limpiar tabla
+
+    // Obtener usuarios desde localStorage
+    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+    // Recorrer usuarios y agregar filas
+    usuarios.forEach((usuario, index) => {
+      const fila = document.createElement('tr');
+
+      fila.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${usuario.nombre}</td>
+        <td>${usuario.apellido}</td>
+        <td>${usuario.email}</td>
+        <td>${usuario.celular}</td>
+        <td>${usuario.edad}</td>
+      `;
+
+      tabla.appendChild(fila);
+    });
+  }
+
+  // Cargar clientes al cargar la página
+  document.addEventListener('DOMContentLoaded', cargarClientes);
+</script>
+</body>
+</html>
